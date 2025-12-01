@@ -9,16 +9,16 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
-        /* Custom Modern Dark Theme (Purple/Cyan Duotone) */
+        
         :root {
-            --color-background: #121212; /* Very Dark Gray / Black */
-            --color-surface: #1E1E1E;    /* Dark Surface for Cards */
-            --color-text-primary: #E0E0E0; /* Off-White for body text */
-            --color-text-secondary: #A0A0A0; /* Muted Light Gray */
+            --color-background: #121212; 
+            --color-surface: #1E1E1E;    
+            --color-text-primary: #E0E0E0; 
+            --color-text-secondary: #A0A0A0; 
             
-            /* Two new accent variables for the duotone theme */
-            --color-accent-purple: #B222FF; /* Primary Branding Color (Name Badge, Borders, Hero Text Highlight) */
-            --color-accent-cyan: #00FFFF; /* Secondary Text/Link Color (H1, H3, Links) */
+            
+            --color-accent-purple: #B222FF; 
+            --color-accent-cyan: #00FFFF; 
         }
 
         body {
@@ -30,23 +30,23 @@
         }
 
         h1, h2, h3 {
-            font-weight: 800; /* All titles (H1, H2, H3) are Extra Bold */
+            font-weight: 800; 
             margin-bottom: 0.5rem;
-            color: var(--color-accent-cyan); /* Titles use Neon Cyan by default */
+            color: var(--color-accent-cyan); 
         }
 
-        /* Hero text accent uses the primary purple for contrast on the H1, which is mostly white */
+        
         .hero-accent-text { 
             color: var(--color-accent-purple); 
             font-weight: 700;
         }
         
-        /* New Style: High-Contrast PURPLE Badge for Main Name (Branding Focus) */
+        
         .name-badge {
-            background-color: var(--color-accent-purple); /* Electric Purple */
-            color: var(--color-background); /* Black text on purple for max contrast */
+            background-color: var(--color-accent-purple); 
+            color: var(--color-background); 
             padding: 0.25rem 0.75rem; 
-            border-radius: 4px; /* Rectangular corner */
+            border-radius: 4px; 
             display: inline-block;
             line-height: 1.5;
             font-size: 1.25rem; 
@@ -54,19 +54,19 @@
             box-shadow: 0 0 15px rgba(178, 34, 255, 0.6); 
         }
 
-        /* Updated Style: Rectangular Pill/Badge for H2 headings (Subtler contrast) */
+        
         .header-pill {
-            background-color: var(--color-text-primary); /* Off-white background */
-            color: var(--color-background); /* Dark text on white pill */
+            background-color: var(--color-text-primary); 
+            color: var(--color-background); 
             padding: 0.35rem 0.85rem; 
-            border-radius: 4px; /* Rectangular corner */
+            border-radius: 4px; 
             display: inline-block;
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
             font-weight: 800;
         }
 
-        /* Project Card Style */
+        
         .project-card {
             background-color: var(--color-surface);
             border-left: 3px solid var(--color-surface); 
@@ -75,11 +75,11 @@
         }
 
         .project-card:hover {
-            border-left-color: var(--color-accent-purple); /* Purple accent on hover */
-            box-shadow: 0 6px 16px rgba(178, 34, 255, 0.2); /* Purple glow on hover */
+            border-left-color: var(--color-accent-purple); 
+            box-shadow: 0 6px 16px rgba(178, 34, 255, 0.2); 
         }
 
-        /* Minimalist Link/Button Style uses CYAN accent */
+        
         .clean-link {
             @apply border-b border-accent-cyan hover:text-white transition duration-300;
             border-color: var(--color-accent-cyan);
@@ -97,19 +97,19 @@
             border: 1px solid #333333; 
             color: var(--color-text-secondary);
         }
-        /* Tech tag hover uses CYAN accent */
+        
         .tech-tag:hover {
             color: var(--color-accent-cyan);
             border-color: var(--color-accent-cyan);
             background-color: #383838; 
         }
         
-        /* Adjusted scroll-margin for smooth navigation */
+        
         .scroll-mt-24 { 
             scroll-margin-top: 3rem; 
         }
 
-        /* Mobile Adjustments */
+        
         @media (max-width: 640px) {
             h1 {
                 font-size: 3rem; 
@@ -123,7 +123,7 @@
             }
         }
         
-        /* --- Enhanced Code for Bubble Animation on Dark Theme --- */
+        
         @keyframes bubble-drift {
             0% { transform: translate(0, 0) rotate(0deg); opacity: 0.1; } 
             25% { transform: translate(25vw, 20vh) rotate(6deg); opacity: 0.15; }
@@ -138,7 +138,7 @@
             left: 0;
             width: 150px; 
             height: 150px;
-            background: var(--color-accent-purple); /* Purple default */
+            background: var(--color-accent-purple); 
             border-radius: 50%;
             filter: blur(120px); 
             opacity: 0.1; 
@@ -180,7 +180,7 @@
             
             <div class="mb-8 w-32 h-32 rounded-full bg-gray-700 flex items-center justify-center border-2 border-[--color-accent-purple] overflow-hidden">
                 <img 
-                    src="/home/blackfyre/WEBSITE/WhatsApp Image 2025-11-27 at 17.59.13.jpeg" 
+                    src="WhatsApp Image 2025-11-27 at 17.59.13.jpeg" 
                     alt="Saksham Yadav Profile Picture" 
                     class="w-full h-full object-cover"
                     onerror="this.onerror=null; this.src='https://placehold.co/128x128/333333/A0A0A0?text=S.Y.'"
@@ -253,7 +253,7 @@
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0 w-10 h-10 bg-gray-800 border border-gray-700 rounded-full flex items-center justify-center overflow-hidden">
                              <img 
-                                src="/home/blackfyre/WEBSITE/302332963_473438948124565_1548855292969650734_n.jpg" 
+                                src="302332963_473438948124565_1548855292969650734_n.jpg" 
                                 alt="School Logo" 
                                 class="w-full h-full object-contain p-1"
                                 onerror="this.onerror=null; this.src='https://placehold.co/40x40/333333/A0A0A0?text=School'"
@@ -295,7 +295,7 @@
                 <span class="tech-tag">
                     <i data-lucide="brain" class="w-3 h-3 mr-1"></i> Machine Learning (PyTorch)
                 </span>
-               
+                
             </div>
         </section>
 
@@ -318,7 +318,7 @@
                     </p>
                     <div class="w-full h-64 bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center text-gray-500 text-sm font-semibold border border-gray-700">
                         <img 
-                            src="/home/blackfyre/WEBSITE/WhatsApp Image 2025-11-27 at 19.49.12.jpeg" 
+                            src="WhatsApp Image 2025-11-27 at 19.49.12.jpeg" 
                             alt="Photo of competition robot or team" 
                             class="w-full h-full object-cover"
                             onerror="this.onerror=null; this.src='https://placehold.co/300x256/333333/A0A0A0?text=Robotics+Image+Here'"
@@ -337,7 +337,7 @@
                     </p>
                     <div class="w-full h-64 bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center text-gray-500 text-sm font-semibold border border-gray-700">
                         <img 
-                            src="/home/blackfyre/WEBSITE/WhatsApp Image 2025-11-27 at 19.39.11.jpeg" 
+                            src="WhatsApp Image 2025-11-27 at 19.39.11.jpeg" 
                             alt="Image of the designed poster" 
                             class="w-full h-full object-cover"
                             onerror="this.onerror=null; this.src='https://placehold.co/300x256/333333/A0A0A0?text=Poster+Image+Here'"
