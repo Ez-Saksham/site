@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saksham Yadav | Student Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* Custom Minimalist Light Theme (Clean, Professional) */
+        :root {
+            --color-background: #FFFFFF; /* Pure White */
+            --color-surface: #F8F8F8;    /* Very Light Gray Surface for Cards */
+            --color-text-primary: #333333; /* Dark Gray */
+            --color-text-secondary: #777777; /* Muted Medium Gray */
+            --color-accent: #111111; /* Near-Black for Accent and Links */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            line-height: 1.7; 
+            transition: background-color 0.3s ease; /* For smooth theme changes if needed later */
+        }
+
+        h1, h2, h3 {
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--color-accent);
+        }
+
+        .accent-text {
+            color: var(--color-accent);
+            font-weight: 700;
+        }
+
+        /* Project Card Style */
+        .project-card {
+            background-color: var(--color-surface);
+            border-left: 3px solid var(--color-surface); 
+            transition: border-left-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-left-color: var(--color-accent);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Minimalist Link/Button Style */
+        .clean-link {
+            @apply border-b border-accent hover:text-black transition duration-300;
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+            padding-bottom: 0.1rem;
+        }
+        .clean-link:hover {
+            border-color: var(--color-text-primary);
+            color: var(--color-text-primary);
+        }
+        
+        .tech-tag {
+            @apply inline-block px-3 py-1 text-xs font-medium tracking-wide rounded transition duration-200;
+            background-color: #EEEEEE;
+            border: 1px solid #DDDDDD;
+            color: var(--color-text-secondary);
+        }
+        .tech-tag:hover {
+            color: var(--color-accent);
+            border-color: var(--color-accent);
+            background-color: #E8E8E8;
+        }
+        
+        /* Adjusted scroll-margin for smooth navigation */
+        .scroll-mt-24 { 
+            scroll-margin-top: 3rem; 
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 3rem; /* Smaller H1 on mobile */
+            }
+            .nav-link {
+                display: none; /* Hide top nav links on very small screens for cleaner look */
+            }
+            .hero-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <header class="py-4 border-b border-gray-200 shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="#home" class="text-xl font-extrabold accent-text tracking-widest">
+                SAKSHAM YADAV
+            </a>
+            <nav class="space-x-4 text-sm font-medium hidden sm:block">
+                <a href="#about" class="nav-link text-gray-700 hover:text-accent transition duration-200">About</a>
+                <a href="#education" class="nav-link text-gray-700 hover:text-accent transition duration-200">Education</a>
+                <a href="#skills" class="nav-link text-gray-700 hover:text-accent transition duration-200">Skills</a>
+                <a href="#accomplishments" class="nav-link text-gray-700 hover:text-accent transition duration-200">Accomplishments</a>
+                <a href="#projects" class="nav-link text-gray-700 hover:text-accent transition duration-200">Projects</a>
+                <a href="#connect" class="nav-link text-gray-700 hover:text-accent transition duration-200">Connect</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 divide-y divide-gray-100">
+
+        <section id="home" class="pt-20 pb-20 text-left flex flex-col items-start min-h-[60vh] justify-center">
+            
+            <div class="mb-8 w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center border-2 border-accent overflow-hidden">
+                <img 
+                    src="/home/blackfyre/WEBSITE/WhatsApp Image 2025-11-27 at 17.59.13.jpeg" 
+                    alt="Saksham Yadav Profile Picture" 
+                    class="w-full h-full object-cover"
+                    onerror="this.onerror=null; this.src='https://placehold.co/128x128/E5E7EB/6B7280?text=S.Y.'"
+                />
+            </div>
+            
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+                <span class="dim-text">Student Developer:</span> Executing Digital Solutions.
+            </h1>
+            <p class="text-xl max-w-3xl text-gray-600 mb-10 font-normal">
+                I am <span class="accent-text">Saksham Yadav</span>, a student focused on software development, debugging, and system optimization. Currently mastering Python, C++, and Machine Learning.
+            </p>
+            <div class="space-x-4 hero-links">
+                <a href="#projects" class="clean-link text-lg">
+                    View Projects
+                </a>
+                <a href="mailto:sakxamydv@example.com" class="clean-link text-lg">
+                    Get in Touch
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8">
+                About Me
+            </h2>
+            <div class="space-y-6 text-lg text-gray-600">
+                <p>I started coding 6 years ago although it was more as a hobby and curiosity. As a student, my studies center around Software Development, Computer Networking and AI and applying theoretical knowledge to real-world applications.</p>
+                <p>My goal is to write clean, maintainable, and efficient code. I prioritize understanding the core mechanics of technologies. My approach is to use small, effective tools working together to solve large problems.</p>
+                <div class="mt-8 pt-4 border-t border-gray-100">
+                    <p class="text-sm uppercase tracking-widest accent-text">Philosophy</p>
+                    <p class="text-xl font-semibold text-gray-800">"Focus on simplicity and efficiency."</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8">
+                Education
+            </h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+                My formal training in computation and architecture, establishing my foundational knowledge.
+            </p>
+            <div class="space-y-6">
+                <div class="project-card rounded-sm p-4 hover:shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center overflow-hidden">
+                            <img 
+                                src="data:image/png;base64,[UNIVERSITY LOGO BASE64 DATA HERE]" 
+                                alt="University Logo" 
+                                class="w-full h-full object-contain p-1"
+                                onerror="this.onerror=null; this.src='https://placehold.co/40x40/E5E7EB/6B7280?text=Uni'"
+                            />
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                                <h3 class="text-lg font-medium text-gray-900">
+                                    NOT ADMISSIONED YET
+                                </h3>
+                                <span class="text-sm font-light text-gray-500 sm:whitespace-nowrap">[xxxx] – [xxxx]</span>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                yet to decide
+                            </p>
+                            <p class="text-xs text-gray-500 mt-1">yet to decide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card rounded-sm p-4 hover:shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center overflow-hidden">
+                             <img 
+                                src="/home/blackfyre/WEBSITE/302332963_473438948124565_1548855292969650734_n.jpg" 
+                                alt="School Logo" 
+                                class="w-full h-full object-contain p-1"
+                                onerror="this.onerror=null; this.src='https://placehold.co/40x40/E5E7EB/6B7280?text=School'"
+                            />
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                                <h3 class="text-lg font-medium text-gray-900">
+                                    [High School/Secondary Education]
+                                </h3>
+                                <span class="text-sm font-light text-gray-500 sm:whitespace-nowrap">[2023] – [2025]</span>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                Bhanu Memorial Higher Secondary School. [Biratnagar, Nepal]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8">
+                Skills & Technologies
+            </h2>
+            <p class="text-lg text-gray-600 mb-10 max-w-3xl">
+                A non-exhaustive list of tools and programming languages I use to build systems.
+            </p>
+            <div class="flex flex-wrap gap-3">
+                <span class="tech-tag">
+                    <i data-lucide="square-stack" class="w-3 h-3 mr-1"></i> C / C++
+                </span>
+                <span class="tech-tag">
+                    <i data-lucide="database" class="w-3 h-3 mr-1"></i> JS
+                </span>
+                <span class="tech-tag">
+                    <i data-lucide="server" class="w-3 h-3 mr-1"></i> Python
+                </span>
+                <span class="tech-tag">
+                    <i data-lucide="brain" class="w-3 h-3 mr-1"></i> Machine Learning (PyTorch)
+                </span>
+               
+            </div>
+        </section>
+
+        <section id="accomplishments" class="py-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8">
+                Accomplishments & Awards 🏆
+            </h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+                Showcasing practical application of skills through competitions and creative work.
+            </p>
+            <div class="grid gap-8 sm:grid-cols-2">
+
+                <div class="project-card rounded-sm p-4 hover:shadow-lg flex flex-col">
+                    <h3 class="text-xl font-medium accent-text mb-2 flex items-center">
+                        <i data-lucide="zap" class="w-5 h-5 mr-2"></i> Robotics Competition Participation
+                    </h3>
+                    <p class="text-sm uppercase tracking-wider text-gray-500 mb-3">Robotics / Engineering</p>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Participated in STAN-ESCN (First Nepal Conference) & Koshi Mini Yantra 2.0 by ROBOT ASSOCIATION OF NEPAL focusing on Robotics and Programming. This challenged my skills in **Arduino programming and Desigining**.
+                    </p>
+                    <div class="w-full h-40 bg-gray-300 rounded-lg overflow-hidden flex items-center justify-center text-gray-700 text-sm font-semibold border border-gray-400">
+                        <img 
+                            src="/home/blackfyre/WEBSITE/WhatsApp Image 2025-11-27 at 19.49.12.jpeg" 
+                            alt="Photo of competition robot or team" 
+                            class="w-full h-full object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/300x160/D1D5DB/4B5563?text=Robotics+Image+Here'"
+                        />
+                    </div>
+                    <span class="text-xs text-gray-500 mt-2">**Result:** [Participation Certificate]</span>
+                </div>
+
+                <div class="project-card rounded-sm p-4 hover:shadow-lg flex flex-col">
+                    <h3 class="text-xl font-medium accent-text mb-2 flex items-center">
+                        <i data-lucide="palette" class="w-5 h-5 mr-2"></i> Creative Poster Design
+                    </h3>
+                    <p class="text-sm uppercase tracking-wider text-gray-500 mb-3">Graphic Design / Visual Communication</p>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Designed a series of posters form classic flims . Developed proficiency in Canva for clear visual communication.
+                    </p>
+                    <div class="w-full h-40 bg-gray-300 rounded-lg overflow-hidden flex items-center justify-center text-gray-700 text-sm font-semibold border border-gray-400">
+                        <img 
+                            src="/home/blackfyre/WEBSITE/WhatsApp Image 2025-11-27 at 19.39.11.jpeg" 
+                            alt="Image of the designed poster" 
+                            class="w-full h-full object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/300x160/D1D5DB/4B5563?text=Poster+Image+Here'"
+                        />
+                    </div>
+                    <span class="text-xs text-gray-500 mt-2">**Focus:** Minimalism</span>
+                </div>
+
+            </div>
+        </section>
+        
+        <section id="languages" class="py-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8">
+                Languages Spoken
+            </h2>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-lg text-gray-600">
+                <p><strong>English:</strong> Fluent / C1 level</p>
+                <span class="text-gray-400">|</span>
+                <p><strong>Nepali:</strong> Native</p>
+                <span class="text-gray-400">|</span>
+                <p><strong>[Other Language]:</strong> Hindi,Maithali</p>
+            </div>
+        </section>
+
+        <section id="hobbies" class="py-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8">
+                Hobbies & Interests 
+            </h2>
+            <p class="text-lg text-gray-600 mb-10 max-w-3xl">
+                A few things I enjoy outside of coding that keep me refreshed and offer different perspectives.
+            </p>
+            <div class="flex flex-wrap gap-3">
+                <span class="tech-tag">
+                    <i data-lucide="book-open" class="w-3 h-3 mr-1"></i> Reading (Non-fiction)
+                </span>
+                <span class="tech-tag">
+                    <i data-lucide="gamepad" class="w-3 h-3 mr-1"></i> Chess
+                </span>
+                <span class="tech-tag">
+                    <i data-lucide="music" class="w-3 h-3 mr-1"></i> Listening to Music
+                </span>
+                <span class="tech-tag">
+                    <i data-lucide="camera" class="w-3 h-3 mr-1"></i> Graphic Design
+                </span>
+                <span class="tech-tag">
+                    <i data-lucide="message-square" class="w-3 h-3 mr-1"></i> Tech ( robotics/ardunio )
+                </span>
+            </div>
+        </section>
+        <section id="projects" class="py-20 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8">
+                Projects & Artifacts
+            </h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+                Practical applications and research prototypes built during my learning process.
+            </p>
+            <div class="grid gap-6">
+                
+                <div class="project-card rounded-sm p-4 hover:shadow-lg">
+                    <div class="flex items-start justify-between">
+                        <h3 class="text-xl font-medium accent-text">Simple CUI based contact_book</h3>
+                        <a href="https://github.com/Ez-Saksham/contact_book" target="_blank" class="inline-flex items-center text-gray-700 hover:text-accent font-medium text-sm transition duration-300">
+                            View Source <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">Read Write and Append</p>
+                    <p class="text-gray-600 text-sm">A simple PYTHON project to test my understanding about the fundamentals of it.</p>
+                </div>
+
+                <div class="project-card rounded-sm p-4 hover:shadow-lg">
+                    <div class="flex items-start justify-between">
+                        <h3 class="text-xl font-medium accent-text">RockPaper-Sissor-CUI-GAME</h3>
+                        <a href="https://github.com/Ez-Saksham/RockPaper-Sissor-" target="_blank" class="inline-flex items-center text-gray-700 hover:text-accent font-medium text-sm transition duration-300">
+                            View Live <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">PYTHON</p>
+                    <p class="text-gray-600 text-sm">Creating something for fun.</p>
+                </div>
+
+                <div class="project-card rounded-sm p-4 hover:shadow-lg">
+                    <div class="flex items-start justify-between">
+                        <h3 class="text-xl font-medium accent-text">ON PROGRESS</h3>
+                        <a href="https://github.com/SakshamYadav/pantheon-api" target="_blank" class="inline-flex items-center text-gray-700 hover:text-accent font-medium text-sm transition duration-300">
+                            Documentation <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">........</p>
+                    <p class="text-gray-600 text-sm">..............................................</p>
+                </div>
+
+            </div>
+        </section>
+        
+        <section id="connect" class="py-20 scroll-mt-24 text-center">
+            <h2 class="text-3xl font-bold mb-6">
+                Connect
+            </h2>
+            <p class="text-lg max-w-2xl mx-auto text-gray-600 mb-10">
+                I am currently seeking guidence and actively learning and building projects. Feel free to connect for opportunities or technical discussions.
+            </p>
+            
+            <a href="mailto:sakshamyadav@example.com" class="inline-flex items-center clean-link !py-1 !text-xl font-medium">
+                <i data-lucide="mail" class="w-6 h-6 mr-3"></i> sakxamydv@gmail.com
+            </a>
+
+            <div class="flex justify-center space-x-6 mt-12 text-gray-500">
+                <a href="https://github.com/Ez-Saksham" target="_blank" class="hover:text-accent transition duration-200">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+                <a href="https://linkedin.com/in/SakshamYadav" target="_blank" class="hover:text-accent transition duration-200">
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </a>
+                <a href="https://x.com/Saksham_911" target="_blank" class="hover:text-accent transition duration-200">
+                    <i data-lucide="twitter" class="w-6 h-6"></i>
+                </a>
+                <a href="https://instagram.com/sakxamydv" target="_blank" class="hover:text-accent transition duration-200">
+                    <i data-lucide="instagram" class="w-6 h-6"></i>
+                </a>
+                <a href="https://facebook.com/sakydv22" target="_blank" class="hover:text-accent transition duration-200">
+                    <i data-lucide="facebook" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-16 py-8 border-t border-gray-100 text-center text-gray-500">
+        <p class="text-sm">&copy; 2025 Saksham Yadav. All rights reserved.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
